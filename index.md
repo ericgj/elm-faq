@@ -538,7 +538,9 @@ There is not one definitive way to do it. Generally, a module in Elm is organize
 
   > I suspect the heart of a great module in Elm is a data structure. A type or type alias that represents some important and coherent concept. From there, you have functions for working with that data structure. A good test for which functions to include might be to ask: does this function make sense if I only read this module?
 
-For a more detailed approach to code organization for SPAs, check out [NoRedInk's style guide](https://github.com/NoRedInk/elm-style-guide).
+For a more detailed approach to code organization for Single Page Applications (SPAs), check out [NoRedInk's style guide](https://github.com/NoRedInk/elm-style-guide).
+
+And for a fully worked example of a simple SPA, see [Richard Feldman's Elm implementation](https://github.com/rtfeldman/elm-spa-example) of the ["Realworld" app](https://github.com/gothinkster/realworld) and [his tour through it](https://dev.to/rtfeldman/tour-of-an-open-source-elm-spa).
 
 ### What is "elm-community"?
 
