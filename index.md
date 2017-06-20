@@ -532,6 +532,10 @@ This is why APIs generally expose `Task` instances rather than `Cmd`:  so you ca
 
 See [Building custom DOM event handlers in Elm](https://robots.thoughtbot.com/building-custom-dom-event-handlers-in-elm) for some examples of event handlers.
 
+### How do I prevent weird DOM behavior (cursor jumps, duplicate input, etc.) for input and textarea fields? 
+
+This is a known issue or set of issues, see discussion and workarounds [here](https://github.com/elm-lang/html/issues/105) and [here](https://github.com/elm-lang/html/issues/55).
+
 ### What is the recommended way to organize modules, file system structure, etc.?
 
 There is not one definitive way to do it. Generally, a module in Elm is organized around a data structure relevant to the domain rather than abstracted functions (such as putting all your view or update functions together). See [Evan's recommendations here](https://www.reddit.com/r/elm/comments/69hwta/can_i_split_my_code_into_viewmodelupdate_folders/dh6szt9/). 
