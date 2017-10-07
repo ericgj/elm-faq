@@ -547,7 +547,7 @@ This is a known issue or set of issues, see discussion and workarounds [here](ht
 
 ### How do I navigate to a new route from within a nested view, for example from a page view rather than the top level of my app?
 
-The [`elm-lang/navigation`][http://package.elm-lang.org/packages/elm-lang/navigation/latest/Navigation] library is the standard for managing browser navigation from within Elm. For changing the URL, you can either use `newUrl` (which adds to the browser's history) or `modifyUrl` (which doesn't). In either case, you pass it the new URL (String), and get back a `Cmd msg`.  
+The [elm-lang/navigation](http://package.elm-lang.org/packages/elm-lang/navigation/latest/Navigation) library is the standard for managing browser navigation from within Elm. For changing the URL, you can either use `newUrl` (which adds to the browser's history) or `modifyUrl` (which doesn't). In either case, you pass it the new URL (String), and get back a `Cmd msg`.  
 
 Typically, on the page where you want to do the navigation (say on clicking a button), you will have 
 
