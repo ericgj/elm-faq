@@ -570,11 +570,11 @@ where `Route.routeToString` converts your Route type to a URL (string). This is 
            ( model,  Route.modifyUrl route )
 ```
 
-Note **there is no need to `Cmd.map` a navigation msg up your update stack**. You only need to define a `NavigateTo` update branch as outlined above, wherever in your app you need to handle browser navigation, and it just works. 
+You only need to define a `NavigateTo` update branch as outlined above, wherever in your app you need to handle browser navigation, and it just works. 
 
 **Why does this work?**
 
-The key thing to note here is that the `msg` is _generic_. This might seem confusing at first. What does it mean to have a `Cmd msg`? Doesn't every Cmd need some _specific_ instruction for updating state based on what comes back from the runtime? The answer is that the handling of URL changes within your app is already defined at the top level through `Navigation.program`. So `modifyUrl` and `newUrl` don't really need to have a concrete `Msg` type specified -- they don't touch it at all. (It's similar to having a reusable view function that defines no event handlers, and returns `Html msg`. You can use it in _any_ msg context.)
+The handling of URL changes within your app is already defined at the top level through `Navigation.program` (which adds an implicit subscription). So `modifyUrl` and `newUrl` don't call a certain message when they are done.  It works regardless of the concrete `Cmd Msg` type of your update, because `Cmd msg` satisfies _any_ `Msg` type. (Similar to how you can use generic `Html msg` in any `Html Msg` context.)
 
 Here are some more in depth resources on URL parsing and navigation.
 
